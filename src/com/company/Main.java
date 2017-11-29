@@ -7,36 +7,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // CheckPoint Level 2: PRETTYPRINT
-        int[][] level2 = prettyPrint(4);
-        System.out.println("Answer for Level 2: ");
-        for (int i = 0; i < level2.length; i++) {
-            for (int j = 0; j < level2.length; j++) {
-                System.out.print(level2[i][j] + " ");
-            }
-            System.out.println();
-        }
+        W1Pre w1 = new W1Pre();
+        System.out.println("********* Arrays problems **********");
 
-        // CheckPoint Level 3: Kth Smallest Element in the ArrayBookmark Suggest Edit
-        System.out.println("\nAnswer for Level 3: ");
-        System.out.println(kthsmallest(new int[]{2,1, 4, 3, 2},3));
+        System.out.println("\nMin Steps in Infinite Grid");
+        System.out.println(w1.coverPoints(new int[]{0,1,1}, new int[]{0,1,2}));
 
-        // CheckPoint Level 4: NEXTGREATER
-        System.out.println("\nAnswer for Level 4: ");
-        int[] result = nextGreater(new int[]{4, 5, 2, 10});
-        System.out.print("[ ");
+        System.out.println("\nWave Array");
+        int[] result = w1.wave(new int[]{5, 1, 3, 2, 4});
         for (int i = 0; i < result.length; i++) {
-            if (i != result.length-1) {
-                System.out.print(result[i] +", ");
-            } else {
-                System.out.print(result[i]);
-            }
+            System.out.print(result[i] + " ");
         }
-        System.out.println(" ]\n");
 
-        // CheckPoint Level 5: Longest Consecutive SequenceBookmark Suggest Edit
-        System.out.println("\nAnswer for Level 5: ");
-        System.out.println(findLongestConseqSubseq(new int[]{100, 4, 200, 1, 3, 2}));
+        System.out.println("\n\n********* Strings problems **********");
+        System.out.println("\nPalindrome String");
+        System.out.println(w1.isPalindrome("1a2"));
+
+        System.out.println("\nLength of Last Word");
+        System.out.println(w1.lengthOfLastWord("Hello World  "));
 
     }
 
@@ -73,7 +61,7 @@ public class Main {
         return result;
     }
 
-    // CheckPoint Level 3: Kth Smallest Element in the ArrayBookmark Suggest Edit
+    // CheckPoint Level 3: Kth Smallest Eleme nt in the ArrayBookmark Suggest Edit
     static int kthsmallest(final int[] A, int B) {
         int kthPos = B-1; // kth smallest in the array position
         int nextLeft = kthPos - 1; // left next of the kth position
