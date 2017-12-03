@@ -7,25 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        W1Pre w1 = new W1Pre();
-        System.out.println("********* Arrays problems **********");
-
-        System.out.println("\nMin Steps in Infinite Grid");
-        System.out.println(w1.coverPoints(new int[]{0,1,1}, new int[]{0,1,2}));
-
-        System.out.println("\nWave Array");
-        int[] result = w1.wave(new int[]{5, 1, 3, 2, 4});
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + " ");
-        }
-
-        System.out.println("\n\n********* Strings problems **********");
-        System.out.println("\nPalindrome String");
-        System.out.println(w1.isPalindrome("1a2"));
-
-        System.out.println("\nLength of Last Word");
-        System.out.println(w1.lengthOfLastWord("Hello World  "));
-
+        HackerRank hackerRank = new HackerRank();
+        hackerRank.testHackerRank();
     }
 
     // CheckPoint Level 2: PRETTYPRINT
